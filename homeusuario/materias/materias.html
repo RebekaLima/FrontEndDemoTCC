@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Espaço do Saber</title>
+</head>
+<body>
+  <header>
+    <nav class="navbar section-content" role="navigation" aria-label="Menu principal">
+  <div class="nav-left">
+    <div class="icon">
+      <img id="menu-toggle" class="icon" src="/img/icon.png" alt="Menu Toggle" />
+    </div>
+    <h2 class="logo-text">
+      <a href="/homeusuario/index.html" class="logo-link">Espaço do Saber</a>
+    </h2>
+  </div>
+
+  <ul class="nav-menu">
+    <li class="nav-item"><a href="#" class="nav-link">Logout</a></li>
+  </ul>
+  </header>
+
+  <div class="sidebar">
+    <div class="perfil">
+      <img src="/img/ftdeperfil.png" alt="Foto do usuário" />
+      <p>Usuário</p>
+    </div>
+    <nav class="menu-lateral" role="navigation" aria-label="Menu lateral">
+
+      <a href="/homeusuario/flashcards/index.html"><span class="emoji">🧠</span> <span class="text">Flashcard</span></a>
+
+      <a href="/homeusuario/materias/materias.html"><span class="emoji">📚</span> <span class="text">Matérias</span></a>
+
+      <a href="/homeusuario/simulados/index.html"><span class="emoji">📝</span> <span class="text">Simulados</span></a>
+
+      <a href="/homeusuario/helenogpt/index.html"><span class="emoji">💬</span> <span class="text">Heleno</span></a>
+    </nav>
+  </div>
+
+  <main>
+    <div class="page-wrapper">
+  <h1 class="titulo">🗂️ Suas Matérias</h1>
+  <p>Escolha uma matéria para estudar</p>
+
+  <div class="card-container">
+    <div class="card portugues">
+      <div class="emoji">📝</div>
+      <h2>Português</h2>
+    </div>
+    <div class="card matematica">
+      <div class="emoji">➗</div>
+      <h2>Matemática</h2>
+    </div>
+    <div class="card historia">
+      <div class="emoji">🏛️</div>
+      <h2>História</h2>
+    </div>
+    <div class="card geografia">
+      <div class="emoji">🗺️</div>
+      <h2>Geografia</h2>
+    </div>
+    <div class="card fisica">
+      <div class="emoji">⚙️</div>
+      <h2>Física</h2>
+    </div>
+    <div class="card biologia">
+      <div class="emoji">🧬</div>
+      <h2>Biologia</h2>
+    </div>
+    <div class="card quimica">
+      <div class="emoji">🧪</div>
+      <h2>Química</h2>
+    </div>
+    <div class="card ingles">
+      <div class="emoji">🇬🇧</div>
+      <h2>Inglês</h2>
+    </div>
+    <div class="card espanhol">
+      <div class="emoji">🇪🇸</div>
+      <h2>Espanhol</h2>
+    </div>
+  </div>
+</div>
+
+  </main>
+
+  <script>
+    const toggleButton = document.getElementById('menu-toggle');
+    const sidebar = document.querySelector('.sidebar');
+
+    toggleButton.addEventListener('click', () => {
+      sidebar.classList.toggle('closed');
+    });
+  </script>
+</body>
+</html>

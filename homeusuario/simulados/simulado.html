@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Helenão</title>
+</head>
+
+<body>
+
+  <header class="header-principal">
+     <nav class="navbar section-content" role="navigation" aria-label="Menu principal">
+  <div class="nav-left">
+    <div class="icon">
+      <img id="menu-toggle" class="icon" src="/img/icon.png" alt="Menu Toggle" />
+    </div>
+    <h2 class="logo-text">
+      <a href="/homeusuario/index.html" class="logo-link">Espaço do Saber</a>
+    </h2>
+  </div>
+
+  <ul class="nav-menu">
+    <li class="nav-item"><a href="#" class="nav-link">Logout</a></li>
+  </ul>
+  </header>
+
+  <div class="sidebar">
+    <div class="perfil">
+      <img src="/img/ftdeperfil.png" alt="Foto do usuário" />
+      <p>Usuário</p>
+    </div>
+    <nav class="menu-lateral" role="navigation" aria-label="Menu lateral">
+
+      <a href="/homeusuario/flashcards/index.html"><span class="emoji">🧠</span> <span class="text">Flashcard</span></a>
+
+      <a href="/homeusuario/materias/materias.html"><span class="emoji">📚</span> <span class="text">Matérias</span></a>
+
+      <a href="/homeusuario/simulados/index.html"><span class="emoji">📝</span> <span class="text">Simulados</span></a>
+
+      <a href="/homeusuario/helenogpt/heleno.html"><span class="emoji">💬</span> <span class="text">Heleno</span></a>
+    </nav>
+  </div>
+
+  <main style="margin-left: 240px; padding: 100px 20px 20px; max-width: 700px; margin:auto;">
+  <div class="simulado-container" role="main" aria-label="Simulado ENEM">
+    <header id="simulado-header">
+      <div class="questao-numero">Questão 1</div>
+      <div class="cronometro" id="cronometro">00:00</div>
+    </header>
+
+    <section class="questao-texto">
+        <h2 class="titulo-questao"> Holy War</h2>
+      <p class="texto-questao">
+        Oh, so we can hate each other and fear each other
+        We can build these walls between each other
+        Baby, blow by blow and brick by brick
+        Keep yourself locked in, yourself locked in
+        […]
+        Oh, maybe we should love somebody
+        Oh, maybe we could care a little more
+        So maybe we should love somebody
+        Instead of polishing the bombs of holy war
+      </p>
+      <p  class="questao"> Nessa letra de canção, que aborda um contexto de ódio 
+            e intolerância, o marcador “instead of ” introduz a ideia de</p>
+    </section>
+
+    <section class="alternativas" role="list" aria-label="Alternativas da questão">
+      <button class="alternativa" role="listitem">A) mudança de comportamento.</button>
+      <button class="alternativa" role="listitem">B) panorama de conflitos.</button>
+      <button class="alternativa" role="listitem">C) rotina de isolamento.</button>
+      <button class="alternativa" role="listitem">D) perspectiva bélica.</button>
+      <button class="alternativa" role="listitem">E) cenário religioso.</button>
+    </section>
+
+    <footer class="navegacao">
+      <button class="btn-nav" aria-label="Questão anterior">← Anterior</button>
+      <button class="btn-nav" aria-label="Próxima questão">Próxima →</button>
+    </footer>
+  </div>
+</main>
+
+
+
+
+  
+
+  <script>
+    const toggleButton = document.getElementById('menu-toggle');
+    const sidebar = document.querySelector('.sidebar');
+
+    toggleButton.addEventListener('click', () => {
+      sidebar.classList.toggle('closed');
+    });
+
+    let segundos = 0;
+    let minutos = 0;
+
+        const cronometro = document.getElementById('cronometro');
+
+        function atualizarCronometro() {
+            segundos++;
+
+            if (segundos === 60) {
+            segundos = 0;
+            minutos++;
+            }
+
+        const minutosFormatados = minutos < 10 ? '0' + minutos : minutos;
+        const segundosFormatados = segundos < 10 ? '0' + segundos : segundos;
+
+        cronometro.textContent = `${minutosFormatados}:${segundosFormatados}`;
+}
+
+setInterval(atualizarCronometro, 1000);
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Helenão</title>
+</head>
+<body>
+  <header>
+     <nav class="navbar section-content" role="navigation" aria-label="Menu principal">
+  <div class="nav-left">
+    <div class="icon">
+      <img id="menu-toggle" class="icon" src="/img/icon.png" alt="Menu Toggle" />
+    </div>
+    <h2 class="logo-text">
+      <a href="/homeusuario/index.html" class="logo-link">Espaço do Saber</a>
+    </h2>
+  </div>
+
+  <ul class="nav-menu">
+    <li class="nav-item"><a href="#" class="nav-link">Logout</a></li>
+  </ul>
+  </header>
+
+  <div class="sidebar">
+    <div class="perfil">
+      <img src="/img/ftdeperfil.png" alt="Foto do usuário" />
+      <p>Usuário</p>
+    </div>
+    <nav class="menu-lateral" role="navigation" aria-label="Menu lateral">
+
+      <a href="#"><span class="emoji">🧠</span> <span class="text">Flashcard</span></a>
+
+      <a href="/homeusuario/materias/materias.html"><span class="emoji">📚</span> <span class="text">Matérias</span></a>
+
+      <a href="/homeusuario/simulados/index.html"><span class="emoji">📝</span> <span class="text">Simulados</span></a>
+
+      <a href="/homeusuario/helenogpt/index.html"><span class="emoji">💬</span> <span class="text">Heleno</span></a>
+    </nav>
+  </div>
+
+  
+
+  <script>
+    const toggleButton = document.getElementById('menu-toggle');
+    const sidebar = document.querySelector('.sidebar');
+
+    toggleButton.addEventListener('click', () => {
+      sidebar.classList.toggle('closed');
+    });
+  </script>
+</body>
+</html>

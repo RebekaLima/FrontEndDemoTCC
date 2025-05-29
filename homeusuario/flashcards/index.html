@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Helenão</title>
+</head>
+<body>
+  <header>
+    <nav class="navbar section-content" role="navigation" aria-label="Menu principal">
+      <div class="icon">
+        <img id="menu-toggle" class="icon" src="/img/icon.png" alt="Menu Toggle" />
+      </div>
+      <h2 class="logo-text"><a href="index.html" class="logo-link">Helenão</a></h2>
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="#" class="nav-link">Logout</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="sidebar">
+    <div class="perfil">
+      <img src="/img/ftdeperfil.png" alt="Foto do usuário" />
+      <p>Usuário</p>
+    </div>
+    <nav class="menu-lateral" role="navigation" aria-label="Menu lateral">
+
+      <a href="/homeusuario/flashcards/index.html"><span class="emoji">🧠</span> <span class="text">Flashcard</span></a>
+
+      <a href="/homeusuario/materias/materias.html"><span class="emoji">📚</span> <span class="text">Matérias</span></a>
+
+      <a href="/homeusuario/simulados/index.html"><span class="emoji">📝</span> <span class="text">Simulados</span></a>
+
+      <a href="/homeusuario/helenogpt/heleno.html"><span class="emoji">💬</span> <span class="text">Heleno</span></a>
+    </nav>
+  </div>
+
+ <main class="anki-container">
+
+  <!-- Lista de Baralhos -->
+  <section class="deck-list">
+    <h2>Seus Baralhos</h2>
+    <div class="decks">
+      <div class="deck" onclick="animarClique(this)">
+        <h3>📚 História</h3>
+        <p>20 cards</p>
+      </div>
+      <div class="deck" onclick="animarClique(this)">
+        <h3>🧪 Química</h3>
+        <p>15 cards</p>
+      </div>
+      <div class="deck" onclick="animarClique(this)">
+        <h3>🌎 Geografia</h3>
+        <p>30 cards</p>
+      </div>
+      <div class="deck" onclick="animarClique(this)">
+        <h3>📐 Matemática</h3>
+        <p>45 cards</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ações -->
+  <section class="actions">
+    <div class="action" onclick="animarClique(this)">
+      <h3>➕ Adicionar Card</h3>
+    </div>
+    <div class="action adicionar-baralho" onclick="animarClique(this)">
+      <h3>🗂️ Adicionar Baralho</h3>
+    </div>
+    <div class="action" onclick="animarClique(this)">
+      <h3>⚙️ Editar / Excluir</h3>
+    </div>
+  </section>
+
+</main>
+
+
+
+
+  
+
+  <script>
+    const toggleButton = document.getElementById('menu-toggle');
+    const sidebar = document.querySelector('.sidebar');
+
+    toggleButton.addEventListener('click', () => {
+      sidebar.classList.toggle('closed');
+    });
+
+    function animarClique(element) {
+  element.style.transform = "scale(0.95)";
+  element.style.transition = "transform 0.1s ease";
+
+  setTimeout(() => {
+    element.style.transform = "scale(1)";
+    element.style.transition = "transform 0.2s ease";
+  }, 100);
+}
+
+
+  </script>
+</body>
+</html>
