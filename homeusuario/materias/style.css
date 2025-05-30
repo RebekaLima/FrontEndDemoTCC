@@ -229,15 +229,15 @@ main {
     margin-bottom: 10px;
 }
 
-.card.portugues { background-color: #38d3e4; }
-.card.matematica { background-color: #8D3D2F; }
-.card.historia { background-color: #c10404; }
-.card.geografia { background-color: #a926b3; }
-.card.fisica { background-color: #f5791a; }
-.card.biologia { background-color: #01a3b6; }
-.card.quimica { background-color: #00C853; }
-.card.ingles { background-color: #19937f; }
-.card.espanhol { background-color: #91045d; }
+.card.portugues { background-color: #98e2eb; }
+.card.matematica { background-color: #8a625b; }
+.card.historia { background-color: #cc7a7a; }
+.card.geografia { background-color: #a878ac; }
+.card.fisica { background-color: #f3b687; }
+.card.biologia { background-color: #6da4aa; }
+.card.quimica { background-color: #7cb895; }
+.card.ingles { background-color: #4f837a; }
+.card.espanhol { background-color: #7c4c6a; }
 
 .card.portugues { border-color: #ffffff; }
 .card.matematica { border-color: #ffffff; }
@@ -311,7 +311,7 @@ main {
   left: 0;
   width: 240px;
   height: calc(100% - 80px);
-  background-color: #f5dbc2;
+  background-color: #ebc3a9;
   padding: 20px;
   box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
   z-index: 4;
@@ -373,6 +373,5 @@ main {
     display: inline-block;
     outline: none;
     font-size: 30px;
-    /* font-weight: 120px; */
     margin-bottom: 10px;
 }
